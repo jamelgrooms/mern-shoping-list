@@ -5,13 +5,18 @@ import AppNavBar from "./components/AppNavbar";
 import ShoppingList from "./components/ShoppingList";
 import { Provider } from "react-redux";
 import store from "./store";
+import ItemModal from './components/itemModal';
+import { Container } from "reactstrap";
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <AppNavBar></AppNavBar>
-        <ShoppingList></ShoppingList>
+        <Container>
+          <ItemModal></ItemModal>
+          <ShoppingList></ShoppingList>
+        </Container>
       </div>
     </Provider>
   );
